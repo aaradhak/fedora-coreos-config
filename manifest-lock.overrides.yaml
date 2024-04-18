@@ -45,6 +45,12 @@ packages:
       bodhi: https://bodhi.fedoraproject.org/updates/FEDORA-2024-a960990153
       reason: https://github.com/coreos/fedora-coreos-tracker/issues/1674#issuecomment-2010200582
       type: fast-track
+  glibc:
+    evr: 2.39-8.fc40
+    metadata:
+      bodhi: https://koji.fedoraproject.org/koji/buildinfo?buildID=2440803
+      reason: https://github.com/coreos/fedora-coreos-tracker/issues/1711
+      type: fast-track
   gnutls:
     evr: 3.8.4-1.fc40
     metadata:
@@ -133,6 +139,18 @@ packages:
     evra: 20240410-1.fc40.noarch
     metadata:
       bodhi: https://bodhi.fedoraproject.org/updates/FEDORA-2024-3cb8093bdf
+      reason: https://github.com/coreos/fedora-coreos-tracker/issues/1674#issuecomment-2010200582
+      type: fast-track
+  rpm-ostree:
+    evr: 2024.5-2.fc40
+    metadata:
+      bodhi: https://bodhi.fedoraproject.org/updates/FEDORA-2024-b59ee8264e
+      reason: https://github.com/coreos/fedora-coreos-tracker/issues/1674#issuecomment-2010200582
+      type: fast-track
+  rpm-ostree-libs:
+    evr: 2024.5-2.fc40
+    metadata:
+      bodhi: https://bodhi.fedoraproject.org/updates/FEDORA-2024-b59ee8264e
       reason: https://github.com/coreos/fedora-coreos-tracker/issues/1674#issuecomment-2010200582
       type: fast-track
   socat:
