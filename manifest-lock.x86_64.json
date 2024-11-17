@@ -2269,13 +2269,13 @@
       }
     },
     "selinux-policy": {
-      "evra": "41.24-1.fc41.noarch",
+      "evra": "41.25-1.fc41.noarch",
       "metadata": {
         "sourcerpm": "selinux-policy"
       }
     },
     "selinux-policy-targeted": {
-      "evra": "41.24-1.fc41.noarch",
+      "evra": "41.25-1.fc41.noarch",
       "metadata": {
         "sourcerpm": "selinux-policy"
       }
@@ -2287,13 +2287,13 @@
       }
     },
     "sg3_utils": {
-      "evra": "1.48-3.fc41.x86_64",
+      "evra": "1.48-4.fc41.x86_64",
       "metadata": {
         "sourcerpm": "sg3_utils"
       }
     },
     "sg3_utils-libs": {
-      "evra": "1.48-3.fc41.x86_64",
+      "evra": "1.48-4.fc41.x86_64",
       "metadata": {
         "sourcerpm": "sg3_utils"
       }
@@ -2545,13 +2545,13 @@
       }
     },
     "vim-data": {
-      "evra": "2:9.1.825-1.fc41.noarch",
+      "evra": "2:9.1.866-1.fc41.noarch",
       "metadata": {
         "sourcerpm": "vim"
       }
     },
     "vim-minimal": {
-      "evra": "2:9.1.825-1.fc41.x86_64",
+      "evra": "2:9.1.866-1.fc41.x86_64",
       "metadata": {
         "sourcerpm": "vim"
       }
@@ -2636,16 +2636,16 @@
     }
   },
   "metadata": {
-    "generated": "2024-11-16T00:00:00Z",
+    "generated": "2024-11-17T00:00:00Z",
     "rpmmd_repos": {
       "fedora": {
         "generated": "2024-10-24T13:55:59Z"
       },
       "fedora-coreos-pool": {
-        "generated": "2024-11-16T19:21:07Z"
+        "generated": "2024-11-17T00:04:48Z"
       },
       "fedora-updates": {
-        "generated": "2024-11-16T02:10:14Z"
+        "generated": "2024-11-17T02:07:16Z"
       }
     }
   }
