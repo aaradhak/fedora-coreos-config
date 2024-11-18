@@ -1987,7 +1987,7 @@
       }
     },
     "policycoreutils": {
-      "evra": "3.7-3.fc41.s390x",
+      "evra": "3.7-5.fc41.s390x",
       "metadata": {
         "sourcerpm": "policycoreutils"
       }
@@ -2498,16 +2498,16 @@
     }
   },
   "metadata": {
-    "generated": "2024-11-17T00:00:00Z",
+    "generated": "2024-11-18T00:00:00Z",
     "rpmmd_repos": {
       "fedora": {
         "generated": "2024-10-24T13:55:55Z"
       },
       "fedora-coreos-pool": {
-        "generated": "2024-11-17T00:02:41Z"
+        "generated": "2024-11-18T00:04:48Z"
       },
       "fedora-updates": {
-        "generated": "2024-11-17T02:07:14Z"
+        "generated": "2024-11-18T03:09:37Z"
       }
     }
   }
