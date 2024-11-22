@@ -44,7 +44,7 @@ jobs:
           # See https://github.com/coreos/fedora-coreos-releng-automation/pull/179
           sed -E -i 's/^(\s+)((snooze:|warn:)\s+.*)/\1# \2 (disabled on promotion)/' origin/kola-denylist.yaml
       - name: Compare trees
-        uses: aaradhak/actions-lib/check-diff@checkdiff
+        uses: coreos/actions-lib/check-diff@main
         with:
           basedir: origin
           patchdir: new
