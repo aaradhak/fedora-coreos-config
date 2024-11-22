@@ -619,19 +619,19 @@
       }
     },
     "fedora-release-common": {
-      "evra": "41-27.noarch",
+      "evra": "41-28.noarch",
       "metadata": {
         "sourcerpm": "fedora-release"
       }
     },
     "fedora-release-coreos": {
-      "evra": "41-27.noarch",
+      "evra": "41-28.noarch",
       "metadata": {
         "sourcerpm": "fedora-release"
       }
     },
     "fedora-release-identity-coreos": {
-      "evra": "41-27.noarch",
+      "evra": "41-28.noarch",
       "metadata": {
         "sourcerpm": "fedora-release"
       }
@@ -847,37 +847,37 @@
       }
     },
     "grub2-common": {
-      "evra": "1:2.12-10.fc41.noarch",
+      "evra": "1:2.12-13.fc41.noarch",
       "metadata": {
         "sourcerpm": "grub2"
       }
     },
     "grub2-efi-x64": {
-      "evra": "1:2.12-10.fc41.x86_64",
+      "evra": "1:2.12-13.fc41.x86_64",
       "metadata": {
         "sourcerpm": "grub2"
       }
     },
     "grub2-pc": {
-      "evra": "1:2.12-10.fc41.x86_64",
+      "evra": "1:2.12-13.fc41.x86_64",
       "metadata": {
         "sourcerpm": "grub2"
       }
     },
     "grub2-pc-modules": {
-      "evra": "1:2.12-10.fc41.noarch",
+      "evra": "1:2.12-13.fc41.noarch",
       "metadata": {
         "sourcerpm": "grub2"
       }
     },
     "grub2-tools": {
-      "evra": "1:2.12-10.fc41.x86_64",
+      "evra": "1:2.12-13.fc41.x86_64",
       "metadata": {
         "sourcerpm": "grub2"
       }
     },
     "grub2-tools-minimal": {
-      "evra": "1:2.12-10.fc41.x86_64",
+      "evra": "1:2.12-13.fc41.x86_64",
       "metadata": {
         "sourcerpm": "grub2"
       }
@@ -2269,13 +2269,13 @@
       }
     },
     "selinux-policy": {
-      "evra": "41.25-1.fc41.noarch",
+      "evra": "41.26-1.fc41.noarch",
       "metadata": {
         "sourcerpm": "selinux-policy"
       }
     },
     "selinux-policy-targeted": {
-      "evra": "41.25-1.fc41.noarch",
+      "evra": "41.26-1.fc41.noarch",
       "metadata": {
         "sourcerpm": "selinux-policy"
       }
@@ -2636,16 +2636,16 @@
     }
   },
   "metadata": {
-    "generated": "2024-11-21T00:00:00Z",
+    "generated": "2024-11-22T00:00:00Z",
     "rpmmd_repos": {
       "fedora": {
         "generated": "2024-10-24T13:55:59Z"
       },
       "fedora-coreos-pool": {
-        "generated": "2024-11-21T10:37:34Z"
+        "generated": "2024-11-22T02:05:36Z"
       },
       "fedora-updates": {
-        "generated": "2024-11-21T03:31:09Z"
+        "generated": "2024-11-22T03:15:44Z"
       }
     }
   }
