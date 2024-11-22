@@ -325,13 +325,13 @@
       }
     },
     "containers-common": {
-      "evra": "5:0.60.4-4.fc41.noarch",
+      "evra": "5:0.61.0-1.fc41.noarch",
       "metadata": {
         "sourcerpm": "containers-common"
       }
     },
     "containers-common-extra": {
-      "evra": "5:0.60.4-4.fc41.noarch",
+      "evra": "5:0.61.0-1.fc41.noarch",
       "metadata": {
         "sourcerpm": "containers-common"
       }
@@ -865,7 +865,7 @@
       }
     },
     "ignition": {
-      "evra": "2.20.0-1.fc41.ppc64le",
+      "evra": "2.20.0-2.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "ignition"
       }
@@ -2083,7 +2083,7 @@
       }
     },
     "podman": {
-      "evra": "5:5.2.5-1.fc41.ppc64le",
+      "evra": "5:5.3.0-1.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "podman"
       }
@@ -2305,7 +2305,7 @@
       }
     },
     "skopeo": {
-      "evra": "1:1.16.1-1.fc41.ppc64le",
+      "evra": "1:1.17.0-1.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "skopeo"
       }
@@ -2606,16 +2606,16 @@
     }
   },
   "metadata": {
-    "generated": "2024-11-19T00:00:00Z",
+    "generated": "2024-11-21T00:00:00Z",
     "rpmmd_repos": {
       "fedora": {
         "generated": "2024-10-24T13:55:58Z"
       },
       "fedora-coreos-pool": {
-        "generated": "2024-11-18T23:50:24Z"
+        "generated": "2024-11-21T10:35:33Z"
       },
       "fedora-updates": {
-        "generated": "2024-11-19T02:16:00Z"
+        "generated": "2024-11-21T03:31:04Z"
       }
     }
   }
