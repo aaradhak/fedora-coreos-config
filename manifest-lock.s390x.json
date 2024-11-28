@@ -727,7 +727,7 @@
       }
     },
     "git-core": {
-      "evra": "2.47.0-1.fc41.s390x",
+      "evra": "2.47.1-1.fc41.s390x",
       "metadata": {
         "sourcerpm": "git"
       }
@@ -2233,7 +2233,7 @@
       }
     },
     "ssh-key-dir": {
-      "evra": "0.1.4-9.fc41.s390x",
+      "evra": "0.1.5-1.fc41.s390x",
       "metadata": {
         "sourcerpm": "rust-ssh-key-dir"
       }
@@ -2498,16 +2498,16 @@
     }
   },
   "metadata": {
-    "generated": "2024-11-26T00:00:00Z",
+    "generated": "2024-11-28T00:00:00Z",
     "rpmmd_repos": {
       "fedora": {
         "generated": "2024-10-24T13:55:55Z"
       },
       "fedora-coreos-pool": {
-        "generated": "2024-11-24T22:18:00Z"
+        "generated": "2024-11-28T19:16:20Z"
       },
       "fedora-updates": {
-        "generated": "2024-11-26T03:09:08Z"
+        "generated": "2024-11-28T03:16:04Z"
       }
     }
   }
