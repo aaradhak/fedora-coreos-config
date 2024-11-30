@@ -517,19 +517,19 @@
       }
     },
     "dracut": {
-      "evra": "102-3.fc41.s390x",
+      "evra": "103-3.fc41.s390x",
       "metadata": {
         "sourcerpm": "dracut"
       }
     },
     "dracut-network": {
-      "evra": "102-3.fc41.s390x",
+      "evra": "103-3.fc41.s390x",
       "metadata": {
         "sourcerpm": "dracut"
       }
     },
     "dracut-squash": {
-      "evra": "102-3.fc41.s390x",
+      "evra": "103-3.fc41.s390x",
       "metadata": {
         "sourcerpm": "dracut"
       }
@@ -967,25 +967,25 @@
       }
     },
     "kernel": {
-      "evra": "6.11.8-300.fc41.s390x",
+      "evra": "6.11.10-300.fc41.s390x",
       "metadata": {
         "sourcerpm": "kernel"
       }
     },
     "kernel-core": {
-      "evra": "6.11.8-300.fc41.s390x",
+      "evra": "6.11.10-300.fc41.s390x",
       "metadata": {
         "sourcerpm": "kernel"
       }
     },
     "kernel-modules": {
-      "evra": "6.11.8-300.fc41.s390x",
+      "evra": "6.11.10-300.fc41.s390x",
       "metadata": {
         "sourcerpm": "kernel"
       }
     },
     "kernel-modules-core": {
-      "evra": "6.11.8-300.fc41.s390x",
+      "evra": "6.11.10-300.fc41.s390x",
       "metadata": {
         "sourcerpm": "kernel"
       }
@@ -1615,7 +1615,7 @@
       }
     },
     "libxcrypt": {
-      "evra": "4.4.36-10.fc41.s390x",
+      "evra": "4.4.36-11.fc41.s390x",
       "metadata": {
         "sourcerpm": "libxcrypt"
       }
@@ -2504,10 +2504,10 @@
         "generated": "2024-10-24T13:55:55Z"
       },
       "fedora-coreos-pool": {
-        "generated": "2024-11-28T23:49:02Z"
+        "generated": "2024-11-30T03:02:18Z"
       },
       "fedora-updates": {
-        "generated": "2024-11-29T03:25:40Z"
+        "generated": "2024-11-30T02:20:04Z"
       }
     }
   }

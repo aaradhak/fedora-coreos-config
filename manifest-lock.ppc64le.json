@@ -523,19 +523,19 @@
       }
     },
     "dracut": {
-      "evra": "102-3.fc41.ppc64le",
+      "evra": "103-3.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "dracut"
       }
     },
     "dracut-network": {
-      "evra": "102-3.fc41.ppc64le",
+      "evra": "103-3.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "dracut"
       }
     },
     "dracut-squash": {
-      "evra": "102-3.fc41.ppc64le",
+      "evra": "103-3.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "dracut"
       }
@@ -817,31 +817,31 @@
       }
     },
     "grub2-common": {
-      "evra": "1:2.12-13.fc41.noarch",
+      "evra": "1:2.12-15.fc41.noarch",
       "metadata": {
         "sourcerpm": "grub2"
       }
     },
     "grub2-ppc64le": {
-      "evra": "1:2.12-13.fc41.ppc64le",
+      "evra": "1:2.12-15.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "grub2"
       }
     },
     "grub2-ppc64le-modules": {
-      "evra": "1:2.12-13.fc41.noarch",
+      "evra": "1:2.12-15.fc41.noarch",
       "metadata": {
         "sourcerpm": "grub2"
       }
     },
     "grub2-tools": {
-      "evra": "1:2.12-13.fc41.ppc64le",
+      "evra": "1:2.12-15.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "grub2"
       }
     },
     "grub2-tools-minimal": {
-      "evra": "1:2.12-13.fc41.ppc64le",
+      "evra": "1:2.12-15.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "grub2"
       }
@@ -1027,25 +1027,25 @@
       }
     },
     "kernel": {
-      "evra": "6.11.8-300.fc41.ppc64le",
+      "evra": "6.11.10-300.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "kernel"
       }
     },
     "kernel-core": {
-      "evra": "6.11.8-300.fc41.ppc64le",
+      "evra": "6.11.10-300.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "kernel"
       }
     },
     "kernel-modules": {
-      "evra": "6.11.8-300.fc41.ppc64le",
+      "evra": "6.11.10-300.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "kernel"
       }
     },
     "kernel-modules-core": {
-      "evra": "6.11.8-300.fc41.ppc64le",
+      "evra": "6.11.10-300.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "kernel"
       }
@@ -1699,7 +1699,7 @@
       }
     },
     "libxcrypt": {
-      "evra": "4.4.36-10.fc41.ppc64le",
+      "evra": "4.4.36-11.fc41.ppc64le",
       "metadata": {
         "sourcerpm": "libxcrypt"
       }
@@ -2612,10 +2612,10 @@
         "generated": "2024-10-24T13:55:58Z"
       },
       "fedora-coreos-pool": {
-        "generated": "2024-11-28T23:49:56Z"
+        "generated": "2024-11-30T03:02:27Z"
       },
       "fedora-updates": {
-        "generated": "2024-11-29T03:25:38Z"
+        "generated": "2024-11-30T02:20:01Z"
       }
     }
   }
