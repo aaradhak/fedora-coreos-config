@@ -673,7 +673,7 @@
       }
     },
     "flatpak-session-helper": {
-      "evra": "1.15.10-1.fc41.aarch64",
+      "evra": "1.15.12-1.fc41.aarch64",
       "metadata": {
         "sourcerpm": "flatpak"
       }
@@ -2221,7 +2221,7 @@
       }
     },
     "runc": {
-      "evra": "2:1.2.1-1.fc41.aarch64",
+      "evra": "2:1.2.2-1.fc41.aarch64",
       "metadata": {
         "sourcerpm": "runc"
       }
@@ -2533,13 +2533,13 @@
       }
     },
     "vim-data": {
-      "evra": "2:9.1.866-1.fc41.noarch",
+      "evra": "2:9.1.895-1.fc41.noarch",
       "metadata": {
         "sourcerpm": "vim"
       }
     },
     "vim-minimal": {
-      "evra": "2:9.1.866-1.fc41.aarch64",
+      "evra": "2:9.1.895-1.fc41.aarch64",
       "metadata": {
         "sourcerpm": "vim"
       }
@@ -2624,16 +2624,16 @@
     }
   },
   "metadata": {
-    "generated": "2024-11-30T00:00:00Z",
+    "generated": "2024-12-02T00:00:00Z",
     "rpmmd_repos": {
       "fedora": {
         "generated": "2024-10-24T13:55:58Z"
       },
       "fedora-coreos-pool": {
-        "generated": "2024-11-30T03:04:47Z"
+        "generated": "2024-12-01T18:59:23Z"
       },
       "fedora-updates": {
-        "generated": "2024-11-30T02:19:58Z"
+        "generated": "2024-12-02T07:02:14Z"
       }
     }
   }
