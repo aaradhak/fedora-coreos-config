@@ -3,6 +3,6 @@
 # see: https://github.com/coreos/coreos-assembler/pull/866.
 - pattern: coreos.boot-mirror*
   tracker: https://github.com/coreos/fedora-coreos-tracker/issues/1659
-  warn: true
   arches:
     - ppc64le
+    
