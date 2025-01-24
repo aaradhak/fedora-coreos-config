@@ -6,3 +6,4 @@
   warn: true
   arches:
     - ppc64le
+    - aarch64
