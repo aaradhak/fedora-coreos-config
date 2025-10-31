@@ -176,6 +176,27 @@ selinux-sanity-check() {
     if [ -n "${unlabeled}" ]; then
         fatal "Some unlabeled files were found"
     fi
+
+    # Fix for selinux-policy-targeted 42.13 -> 42.14 upgrade (FC43 -> FC44)
+    # The policy change relabeled /var/opt/* from var_t to usr_t
+    # Existing test files need to be relabeled to match the new policy
+    echo "Checking if /var/opt/kola relabeling is needed..."
+    current_fedora_ver=$(get_fedora_ver)
+    if [ "${current_fedora_ver}" -ge 44 ]; then
+        echo "Fedora CoreOS ${current_fedora_ver} detected - relabeling /var/opt/kola for new SELinux policy..."
+        if [ -d /var/opt/kola ]; then
+            echo "Running restorecon on /var/opt/kola..."
+            restorecon -Rv /var/opt/kola || {
+                echo "Warning: restorecon on /var/opt/kola failed with exit code $?"
+            }
+            echo "Relabeling of /var/opt/kola complete."
+        else
+            echo "/var/opt/kola directory does not exist, skipping relabel."
+        fi
+    else
+        echo "Current Fedora version: ${current_fedora_ver} - no /var/opt/kola relabeling needed."
+    fi
+
     mislabeled="$(restorecon -vnr /var/ /etc/ /usr/ /boot/)"
     if [ -n "${mislabeled}" ]; then
         # Exceptions for files that could be wrong (sometimes upgrades are messy)
@@ -196,10 +217,8 @@ selinux-sanity-check() {
         # - Would relabel /var/lib/systemd/random-seed from system_u:object_r:init_var_lib_t:s0 to system_u:object_r:random_seed_t:s0
         #       - 42.20250526.1.0 -> 42.20250609.1.0
         #       - https://github.com/coreos/fedora-coreos-tracker/issues/1965#issuecomment-2959831808
-        # - Would relabel /var/opt/kola from unconfined_u:object_r:var_t:s0 to unconfined_u:object_r:usr_t:s0
-        # - Would relabel /var/opt/kola/extdata from unconfined_u:object_r:var_t:s0 to unconfined_u:object_r:usr_t:s0
-        # - Would relabel /var/opt/kola/extdata/commonlib.sh from unconfined_u:object_r:var_t:s0 to unconfined_u:object_r:usr_t:s0
-        #       - These paths are created by kola test framework itself during test execution
+        # NOTE: /var/opt/kola paths are no longer in exceptions because they are now
+        # automatically relabeled before the validation step (see lines 180-198 above)
         declare -A exceptions=(
            ['/var/lib/cni']=1
            ['/etc/selinux/targeted/semanage.read.LOCK']=1
@@ -211,9 +230,6 @@ selinux-sanity-check() {
            ['/var/cache/systemd']=1
            ['/var/cache/systemd/home']=1
            ['/var/lib/systemd/random-seed']=1
-           ['/var/opt/kola']=1
-           ['/var/opt/kola/extdata']=1
-           ['/var/opt/kola/extdata/commonlib.sh']=1
         )
         paths="$(echo "${mislabeled}" | grep "Would relabel" | cut -d ' ' -f 3)"
         found=""
