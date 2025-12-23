@@ -12,16 +12,26 @@ set -xeuo pipefail
 
 . "$KOLA_EXT_DATA/commonlib.sh"
 
-# Find SRIOV network interfaces (those using hv_pci driver)
-# These are the interfaces created by Azure Accelerated Networking
+# Find SRIOV network interfaces
+# Azure SR-IOV interfaces are PCI devices (not vmbus) and use vendor drivers like mlx5_core
+# The synthetic interface uses hv_netvsc driver and is on the vmbus
 sriov_interfaces=()
 for iface in /sys/class/net/*; do
+    iface_name=$(basename "$iface")
+    # Skip loopback
+    if [ "$iface_name" = "lo" ]; then
+        continue
+    fi
+
     if [ -e "$iface/device/driver" ]; then
         driver=$(basename "$(readlink "$iface/device/driver")")
-        if [ "$driver" = "hv_pci" ]; then
-            iface_name=$(basename "$iface")
-            sriov_interfaces+=("$iface_name")
-            echo "Found SRIOV interface: $iface_name with driver: $driver"
+        # SR-IOV interfaces are on PCI bus, not vmbus (hv_netvsc is the synthetic interface)
+        if [ "$driver" != "hv_netvsc" ] && [ -e "$iface/device/subsystem" ]; then
+            subsystem=$(basename "$(readlink "$iface/device/subsystem")")
+            if [ "$subsystem" = "pci" ]; then
+                sriov_interfaces+=("$iface_name")
+                echo "Found SRIOV interface: $iface_name with driver: $driver on PCI bus"
+            fi
         fi
     fi
 done
@@ -29,7 +39,7 @@ done
 # If no SRIOV interfaces found, this might be a VM size without Accelerated Networking
 # or the feature might not be enabled. We should have at least one SRIOV interface.
 if [ ${#sriov_interfaces[@]} -eq 0 ]; then
-    fatal "No SRIOV interfaces found. Expected at least one interface with hv_pci driver."
+    fatal "No SRIOV interfaces found. Expected at least one PCI network interface (non-hv_netvsc)."
 fi
 
 # Check that each SRIOV interface has the AZURE_UNMANAGED_SRIOV property set
