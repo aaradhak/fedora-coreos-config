@@ -43,12 +43,14 @@ for iface in "${sriov_interfaces[@]}"; do
     fi
 done
 
-nm_devices=$(nmcli -t -f DEVICE,STATE -m json device)
+nm_devices=$(nmcli -t -f DEVICE,STATE device)
 
 for iface in "${sriov_interfaces[@]}"; do
     # Check NetworkManager's device list from cached output
-    state=$(echo "$nm_devices" | jq -r --arg iface "$iface" '.[] | select(.DEVICE == $iface) | .STATE' || true)
-    if [[ -n "${state}" && "${state}" != "unmanaged" ]]; then
-        fatal "NetworkManager is managing SRIOV interface $iface (state: $state). It should be unmanaged."
+    if echo "$nm_devices" | grep -q "^$iface:"; then
+        state=$(echo "$nm_devices" | grep "^$iface:" | cut -d: -f2)
+        if [ "$state" != "unmanaged" ]; then
+            fatal "NetworkManager is managing SRIOV interface $iface (state: $state). It should be unmanaged."
+        fi
     fi
 done
