@@ -10,7 +10,7 @@ set -xeuo pipefail
 . "$KOLA_EXT_DATA/commonlib.sh"
 
 # Find SRIOV network interfaces
-# Azure SR-IOV interfaces use the mlx5_core driver
+# Azure SR-IOV interfaces use Mellanox drivers (mlx4_core or mlx5_core)
 sriov_interfaces=()
 for iface in /sys/class/net/*; do
     iface_name=$(basename "$iface")
@@ -21,8 +21,8 @@ for iface in /sys/class/net/*; do
 
     if [ -e "$iface/device/driver" ]; then
         driver=$(basename "$(readlink "$iface/device/driver")")
-        # SR-IOV interfaces on Azure use the mlx5_core driver
-        if [ "$driver" = "mlx5_core" ]; then
+        # SR-IOV interfaces on Azure use Mellanox drivers (mlx4_core or mlx5_core)
+        if [ "$driver" = "mlx4_core" ] || [ "$driver" = "mlx5_core" ]; then
             sriov_interfaces+=("$iface_name")
         fi
     fi
@@ -31,7 +31,7 @@ done
 # If no SRIOV interfaces found then this might be a VM size without Accelerated Networking
 # or the feature might not be enabled. We should have at least one SRIOV interface.
 if [ ${#sriov_interfaces[@]} -eq 0 ]; then
-    fatal "No SRIOV interfaces found, expected at least one mlx5_core network interface."
+    fatal "No SRIOV interfaces found, expected at least one Mellanox (mlx4_core/mlx5_core) network interface."
 fi
 
 # Check that each SRIOV interface has the AZURE_UNMANAGED_SRIOV property set
